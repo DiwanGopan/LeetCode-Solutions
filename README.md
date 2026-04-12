@@ -18,10 +18,9 @@ This repository contains my solutions to various problems, focusing on improving
 
 - Arrays & Hashing  
 - Linked List  
-- Sliding Window  
 - Stack & Queue  
-- Trees & Graphs  
-- Dynamic Programming *(in progress)*  
+- Sliding Window *(in progress)*  
+ 
 
 ---
 
