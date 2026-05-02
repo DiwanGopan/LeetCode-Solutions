@@ -1,0 +1,60 @@
+WHEN TO USE TWO POINTERS (NON-SLIDING WINDOW)
+
+1. Is a linear structure involved?
+   (Array / String / Linked List)
+   If NO → Do not use two pointers
+
+2. Is the array sorted or can it be sorted safely?
+   (Sorting should not break logic)
+   If YES → Use Left + Right pointers
+
+3. Are you solving pair / triplet / target problems?
+   - Sum = target
+   - Closest sum
+   - Unique combinations
+   → Use Left + Right OR Fix one + two pointers
+
+4. Need to remove duplicates / filter / modify in-place?
+   (No extra space allowed)
+   → Use Slow + Fast pointers
+
+5. Are you comparing elements from both ends?
+   - Palindrome
+   - Reverse
+   - Max/min using ends
+   → Use Left + Right pointers
+
+6. Need in-place rearrangement?
+   - Move zeroes
+   - Partition array
+   - Segregation problems
+   → Use Slow + Fast pointers
+
+7. Is brute force using nested loops (O(n²))?
+   → Try replacing inner loop with a moving pointer
+
+8. Can the result be determined by pointer movement?
+   - Moving left/right changes outcome predictably
+   → Strong signal for two pointers
+
+
+POINTER TYPES:
+
+1. Left + Right (Opposite Ends)
+   - Used for sorted arrays, pair problems, comparisons
+   Movement:
+     if condition < target → left++
+     if condition > target → right--
+     if match → process and move both
+
+2. Slow + Fast (Same Direction)
+   - Used for in-place updates/removals
+   Movement:
+     fast moves every step
+     slow moves only when condition is satisfied
+
+
+FINAL MENTAL SHORTCUT:
+
+"If I can avoid re-checking elements and instead adjust two positions
+to reach the answer efficiently → use two pointers."
